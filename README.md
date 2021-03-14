@@ -1,1 +1,1 @@
-Quoote Generator
+Quote Generator
