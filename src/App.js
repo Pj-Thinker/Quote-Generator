@@ -9,20 +9,12 @@ function App() {
   const [index, setIndex] = useState(0);
 
   const getData = async () => {
-    try {
-      const response = await fetch(url);
-      const newQuotes = await response.json();
-
-      setQuotes(newQuotes);
-      setLoading(false);
-      if (!response.ok) {
-        throw Error(response.statusText);
-      } else {
-        // setIndex(Math.floor(Math.random() * quotes.length));
-      }
-    } catch (error) {
-      console.log("Could not get the data");
+    const response = await fetch(url);
+    const myData = await response.json();
+    if (response.status !== 200) {
+      throw new Error("Error Fetching Data");
     }
+    return myData;
   };
 
   const getRandomValue = () => {
@@ -34,7 +26,13 @@ function App() {
   };
 
   useEffect(() => {
-    getData();
+    getData()
+      .then((myData) => {
+        setQuotes(myData);
+        setLoading(false);
+        setIndex(Math.floor(Math.random() * myData.length));
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   if (loading) {
