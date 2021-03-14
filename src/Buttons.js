@@ -15,12 +15,18 @@ const Buttons = ({ author, text, getRandomValue }) => {
   };
 
   return (
-    <>
-      <button onClick={() => getRandomValue()}>srprise me!</button>
+    <div className="btn-box">
+      <button id="new-quote" onClick={() => getRandomValue()}>
+        New Quote
+      </button>
 
-      <button>
+      <button className="btn-save" onClick={() => downloadToFile()}>
+        Save
+      </button>
+
+      <button className="twitter-btn">
         <a
-          id="tweet"
+          id="tweet-quote"
           className="twitter-share-button"
           href={link}
           rel="noreferrer"
@@ -29,11 +35,7 @@ const Buttons = ({ author, text, getRandomValue }) => {
           Tweet
         </a>
       </button>
-
-      <button id="btnSave" onClick={() => downloadToFile()}>
-        save
-      </button>
-    </>
+    </div>
   );
 };
 

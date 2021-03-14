@@ -5,11 +5,13 @@ function Quote({ quotes, index, getRandomValue }) {
   const { text, author } = quotes[index];
 
   return (
-    <section className="section">
+    <section id="quote-box" className="container">
       <h2 className="title">Quotes</h2>
 
-      {<h4>{author || "unknown"} </h4>}
-      <p>{text}</p>
+      <div className="quote">
+        <p id="text">{text}</p>
+        {<h3 id="author">{author || "unknown"} </h3>}
+      </div>
 
       <Buttons author={author} text={text} getRandomValue={getRandomValue} />
     </section>
