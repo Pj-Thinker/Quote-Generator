@@ -18,7 +18,7 @@ function App() {
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
-        setIndex(Math.floor(Math.random() * quotes.length));
+        // setIndex(Math.floor(Math.random() * quotes.length));
       }
     } catch (error) {
       console.log("Could not get the data");
