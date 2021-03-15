@@ -1,4 +1,5 @@
 import React from "react";
+import { CgTwitter } from "react-icons/cg";
 
 const Buttons = ({ author, text, getRandomValue }) => {
   let link = `https://twitter.com/intent/tweet?text=${text + " - " + author}`;
@@ -32,9 +33,17 @@ const Buttons = ({ author, text, getRandomValue }) => {
           rel="noreferrer"
           target="_blank"
         >
-          Tweet
+          <CgTwitter />
         </a>
       </button>
+
+      <a
+        className="pendar"
+        href="https://www.instagram.com/the.pendar/"
+        target="-blank"
+      >
+        The.Pendar
+      </a>
     </div>
   );
 };
