@@ -15,16 +15,15 @@
   --max-width: 760px;
   --transition: all 0.3s linear;
 
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-1: hsl(209, 61%, 12%);
+  --clr-grey-2: hsl(209, 39%, 28%);
+  --clr-grey-3: hsl(209, 33%, 40%);
   --clr-grey-4: #f1f5f8;
 }
 
 body {
   font-family: Ubuntu, Cantarell, "Open Sans", sans-serif;
   background: var(--clr-bg);
-  color: var(--clr-grey-1);
 
   line-height: 1.5;
   font-size: 0.875rem;
@@ -42,7 +41,7 @@ body {
   max-width: 80vw;
   min-height: 250px;
   max-height: 80vh;
-  padding: 0.75rem 1.125rem;
+  padding: 1rem 1.125rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,12 +71,9 @@ body {
   user-select: none;
 }
 
-.quote {
-  /* border-bottom: 1px solid slateblue; */
-}
-
 #text {
   font-size: 1.25rem;
+  font-weight: 500;
   margin: 0 auto;
   line-height: 1.6;
   margin-bottom: 0.6rem;
@@ -86,7 +82,7 @@ body {
 
 #author {
   font-size: 0.85rem;
-  color: var(--clr-grey-3);
+  color: var(--clr-grey-2);
 }
 
 .btn-box {
@@ -101,7 +97,7 @@ button {
   display: inline-block;
   font-weight: 500;
   padding: 0.4rem 0.75rem;
-  color: var(--clr-grey-3);
+  color: var(--clr-grey-2);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -111,7 +107,7 @@ button {
 }
 
 a {
-  color: var(--clr-grey-3);
+  color: var(--clr-grey-2);
   text-decoration: none;
   transition: var(--transition);
 }
@@ -134,6 +130,10 @@ button:hover {
   bottom: 1%;
   transform: translate(-50%);
   font-size: 0.8rem;
+}
+
+.pendar:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 800px) {
